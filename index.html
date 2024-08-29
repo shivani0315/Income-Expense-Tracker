@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Income Expense Tracker</h1>
+            <div class="summary">
+                <div>Total Income: <span id="total-income">₹0.00</span></div>
+                <div>Total Expenses: <span id="total-expenses">₹0.00</span></div>
+                <div>Net Balance: <span id="net-balance">₹0.00</span></div>
+            </div>
+        </header>
+        
+        <main>
+            <form id="entry-form">
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <div class="radio-group">
+                    <label><input type="radio" name="type" value="income" checked> Income</label>
+                    <label><input type="radio" name="type" value="expense"> Expense</label>
+                </div>
+                <button type="submit">Add Entry</button>
+            </form>
+            
+            <div class="filters">
+                <label><input type="radio" name="filter" value="all" checked> All</label>
+                <label><input type="radio" name="filter" value="income"> Income</label>
+                <label><input type="radio" name="filter" value="expense"> Expense</label>
+            </div>
+
+            <ul id="entry-list"></ul>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

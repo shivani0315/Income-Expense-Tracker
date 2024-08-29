@@ -1,0 +1,167 @@
+/* Reset default margins and paddings for a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.summary div {
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.filters {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.filters label {
+    margin-right: 15px;
+}
+
+#entry-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#entry-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#entry-list li:last-child {
+    border-bottom: none;
+}
+
+#entry-list li span {
+    flex: 1;
+}
+
+#entry-list li button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+#entry-list li button.edit {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#entry-list li button.edit:hover {
+    background-color: #0056b3;
+}
+
+#entry-list li button.delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#entry-list li button.delete:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .summary div {
+        margin-bottom: 10px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
